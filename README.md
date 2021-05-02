@@ -58,6 +58,8 @@ There are two folders in `<application-name>/APIs` directory.
 
 *After importing OpenAPI file, it might require some minor changes in order to successfully hit the endpoints. Please, contact `khanalshashi@gmail.com` for any confusions.* 
 
+*Get `construction_site id` from the database and save to environment variable or use directly in the API request in your API testing client.*
+
 ## Tests
 
     $ npm run test
