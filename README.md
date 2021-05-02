@@ -1,7 +1,6 @@
 # Smart Construction Dashboard
-[![Build Status](https://travis-ci.org/shashikhanal/cesium.svg?branch=main)](https://travis-ci.org/shashikhanal/cesium)
-[![GitHub license](https://img.shields.io/github/license/shashikhanal/cesium.svg)](https://github.com/shashikhanal/cesium/blob/main/LICENSE)
-
+[![Build Status](https://travis-ci.com/shashikhanal/cesium.svg?branch=main)](https://travis-ci.com/shashikhanal/cesium)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > Smart Construction Dashboard has a feature that allows users to create and edit a catalog of materials, such as sand, gravel, and dirt, for construction projects. At a high level, this feature will: fetch the current list of materials for the current site, allow the user to create, edit, and delete materials, and display the total cost of all materials.
 
