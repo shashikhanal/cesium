@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "814638ea-68fe-4ae8-bf19-0c4ba05179d5",
+		"name": "cesium-apis",
+		"description": "# Introduction\nTest server status\n\n# Overview\nTests status of the server\n\n# Authentication\nNo authentication\n\n# Error Codes\n200",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Fetch materials",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/sites/:id/materials",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"sites",
+						":id",
+						"materials"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{site_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create materials",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"name\": \"Gravel\",\n        \"volume_cubic_meter\": 2.5,\n        \"cost_cubic_meter\": 2,\n        \"color\": \"green\",\n        \"delivery_date\": \"2021-01-02\",\n        \"construction_site\": \"{{site_id}}\"\n    },\n    {\n        \"name\": \"Dirt\",\n        \"volume_cubic_meter\": 1.5,\n        \"cost_cubic_meter\": 2,\n        \"color\": \"gray\",\n        \"delivery_date\": \"2021-01-03\",\n        \"construction_site\": \"{{site_id}}\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/sites/:id/materials",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"sites",
+						":id",
+						"materials"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{site_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update materials",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"material_id\": 11,\n        \"material\": {\n            \"name\": \"Gravel 2\",\n            \"volume_cubic_meter\": 2.5,\n            \"cost_cubic_meter\": 3.5,\n            \"color\": \"green 2\",\n            \"delivery_date\": \"2021-01-02\",\n            \"construction_site\": \"{{site_id}}\"\n        }\n    },\n    {\n        \"material_id\": 12,\n        \"material\": {\n            \"name\": \"Dirt 2\",\n            \"volume_cubic_meter\": 1.5,\n            \"cost_cubic_meter\": 2,\n            \"color\": \"gray 2\",\n            \"delivery_date\": \"2021-01-03\",\n            \"construction_site\": \"{{site_id}}\"\n        }\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/sites/:id/materials",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"sites",
+						":id",
+						"materials"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{site_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete materials",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/sites/:id/materials/:materialIds",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"sites",
+						":id",
+						"materials",
+						":materialIds"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{site_id}}"
+						},
+						{
+							"key": "materialIds",
+							"value": "[11]"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
